@@ -20,7 +20,8 @@ class Main {
 
         // Normalize dict for case insensitivity
         dict = dict.stream().map(String::toLowerCase).collect(Collectors.toSet());
-//        System.out.println(dict);
+        // System.out.println(dict);
+
         // Input text lines
         Set<String> txt = new HashSet<>();
         int l = sc.nextInt();
@@ -30,7 +31,7 @@ class Main {
             txt.addAll(Arrays.stream(sc.nextLine().split("\\s+")).collect(Collectors.toSet()));
         }
 
-//        System.out.println(txt);
+        // System.out.println(txt);
 
         // Words from lower-case normalized txt not in dict
         Set<String> misspelled = new HashSet<>(txt.stream().map(String::toLowerCase).collect(Collectors.toSet()));
