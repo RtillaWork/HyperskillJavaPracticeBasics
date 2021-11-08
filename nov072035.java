@@ -7,7 +7,15 @@ class SetUtils {
      */
     public static Set<String> symmetricDifference(Set<String> set1, Set<String> set2) {
         // write your code here
-        return Set.of();
+        Set<String> s1 = new HashSet<>(set1);
+        Set<String> s2 = new HashSet<>(set2);
+        
+        s1.removeAll(set2);
+        s2.removeAll(set1);
+                
+        s1.addAll(s2);
+        
+        return s1;
     }
 
 }
